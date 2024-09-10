@@ -1,0 +1,41 @@
+[tool.poetry]
+name = "scDiRectX"
+version = "1.0.0"
+description = "Tree-based framework for accurate cancer driver gene identification using single-cell RNA sequencing and dimensionality reduction"
+authors = ["Kyungwook Lee <kyungwook.lee@standigm.com>"]
+maintainers = ["Standigm Inc. <bioplatform@standigm.com>"]
+keywords = ["Multiomics", "Protein-protein interaction", "Single-cell RNA-seq", 
+            "Dimensionality reduction", "XGBoost", "Graph Neural Nets"]
+repository = "https://github.com/Standigm/scDiRectX"
+classifiers = [
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "Intended Audience :: Science/Research",
+]
+license = ""
+readme = "README.md"
+packages = [
+    { include = "src" }
+]
+
+[tool.poetry.dependencies]
+python = "~3.11"
+torch = "2.0.0"
+scikit-learn = "^1.2.2"
+torch-geometric = "^2.3.0"
+pandas = "^1.5.3"
+tensorboard = "^2.12.0"
+tomlkit = "^0.11.7"
+xgboost = "^1.7.5"
+pyg_lib = {url = "https://data.pyg.org/whl/torch-2.0.0%2Bcu117/pyg_lib-0.2.0%2Bpt20cu117-cp311-cp311-linux_x86_64.whl"}
+torch_scatter = {url = "https://data.pyg.org/whl/torch-2.0.0%2Bcu117/torch_scatter-2.1.1%2Bpt20cu117-cp311-cp311-linux_x86_64.whl"}
+torch_sparse = {url = "https://data.pyg.org/whl/torch-2.0.0%2Bcu117/torch_sparse-0.6.17%2Bpt20cu117-cp311-cp311-linux_x86_64.whl"}
+torch_cluster = {url = "https://data.pyg.org/whl/torch-2.0.0%2Bcu117/torch_cluster-1.6.1%2Bpt20cu117-cp311-cp311-linux_x86_64.whl"}
+numba = "^0.57.0"
+discotoolkit = "^1.1.2"
+numpy = "1.23.2"
+shap = "^0.44.0"
+
+[tool.poetry.group.dev.dependencies]
+jupyter = "^1.0.0"
+torch-tb-profiler = "^0.4.3"
+
